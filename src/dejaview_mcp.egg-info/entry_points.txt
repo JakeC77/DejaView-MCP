@@ -1,2 +1,0 @@
-[console_scripts]
-dejaview-mcp = dejaview_mcp.server:run
