@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools==67.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dejaview-mcp"
+version = "0.1.0"
+description = "Persistent knowledge graph memory for AI agents — DejaView MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "DejaView", email = "jake0christensen@gmail.com" }]
+keywords = ["mcp", "memory", "knowledge-graph", "ai", "agents", "llm"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "mcp>=1.0.0",
+  "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://dejaview.io"
+Documentation = "https://dejaview.io"
+Repository = "https://github.com/JakeC77/DejaView"
+"Bug Tracker" = "https://github.com/JakeC77/DejaView/issues"
+
+[project.scripts]
+dejaview-mcp = "dejaview_mcp.server:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
